@@ -1,31 +1,22 @@
-import {Container, Row, Col, Button, Image, Card} from 'react-bootstrap';
+import { Container, Row, Col, Button, Card } from 'react-bootstrap';
 import '../styles/Home.css';
 
 export default function Home() {
     return (
         <div className="home-page">
-            <div className="hero-section">
-                <Container>
-                    <Row className="align-items-center text-center">
-                        <Col md={6}>
-                            <h1 className="hero-title">ONLINE STUDY</h1>
-                            <p className="hero-description">
-                                Explore free and accredited courses to expand your knowledge.
-                            </p>
-                            <Button variant="primary" className="start-button">
-                                Start Now
-                            </Button>
-                        </Col>
-                        <Col md={6}>
-                            <Image src='/images/photo-man.jpg' alt="photo-man" fluid />
-                        </Col>
-                    </Row>
-                </Container>
+            <div className="hero">
+                <img src="/images/photo-man.jpg" alt="Фонове зображення" className="hero-image"/>
+                <div className="hero-text-container">
+                    <h1 className="hero-title">Learn WordPress the easy way.</h1>
+                    <p className="hero-description">Learn WordPress basics
+                        right here in about an hour!</p>
+                    <button className="hero-button">Start Learning Now</button>
+                </div>
             </div>
 
             <div className="features-section">
                 <Container>
-                    <h2 className="text-center mb-4">
+                    <h2 className="text-center mb-4" style={{ color: '#fff', fontWeight: 'bold' }}>
                         We provide you with the right tools to interact confidently.
                     </h2>
                     <Row>
@@ -42,7 +33,7 @@ export default function Home() {
                                         Practise your listening, reading, and speaking skills with
                                         audio and video materials.
                                     </Card.Text>
-                                    <Button variant="primary">Start learning</Button>
+                                    <Button style={{ backgroundColor: '#4CAF50', border: 'none' }}>Start learning</Button>
                                 </Card.Body>
                             </Card>
                         </Col>
@@ -59,7 +50,7 @@ export default function Home() {
                                         Improve your grammar and increase your confidence with
                                         clear explanations and exercises.
                                     </Card.Text>
-                                    <Button variant="primary">Start learning</Button>
+                                    <Button style={{ backgroundColor: '#4CAF50', border: 'none' }}>Start learning</Button>
                                 </Card.Body>
                             </Card>
                         </Col>
@@ -76,7 +67,7 @@ export default function Home() {
                                         Learn new words and improve your vocabulary to communicate
                                         effectively.
                                     </Card.Text>
-                                    <Button variant="primary">Start learning</Button>
+                                    <Button style={{ backgroundColor: '#4CAF50', border: 'none' }}>Start learning</Button>
                                 </Card.Body>
                             </Card>
                         </Col>
