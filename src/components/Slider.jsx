@@ -1,30 +1,34 @@
-import Carousel from 'react-bootstrap/Carousel'
+import PropTypes from 'prop-types';
+import Carousel from 'react-bootstrap/Carousel';
 
-export default function Slider() {
+export default function Slider({ slides }) {
     return (
         <Carousel>
-            <Carousel.Item>
-                <img
-                    className="d-block w-100"
-                    src="/images/photo-man.jpg"
-                    alt="First slide"
-                />
-            </Carousel.Item>
-            <Carousel.Caption>
-                <h3>First slide label</h3>
-                <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-            </Carousel.Caption>
-            <Carousel.Item>
-                <img
-                    className="d-block w-100"
-                    src="/images/photo-man.jpg"
-                    alt="Second slide"
-                />
-            </Carousel.Item>
-            <Carousel.Caption>
-                <h3>Second slide label</h3>
-                <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-            </Carousel.Caption>
+            {slides.map((slide, index) => (
+                <Carousel.Item key={index}>
+                    <img
+                        className="d-block w-100"
+                        src={slide.image}
+                        alt={slide.altText}
+                    />
+                    <Carousel.Caption>
+                        <h3 className="slide-title">{slide.label}</h3>
+                        <p className="slide-description">{slide.description}</p>
+                    </Carousel.Caption>
+                </Carousel.Item>
+            ))}
         </Carousel>
-    )
+    );
 }
+
+Slider.propTypes = {
+    slides: PropTypes.arrayOf(
+        PropTypes.shape({
+            image: PropTypes.string.isRequired,
+            altText: PropTypes.string.isRequired,
+            label: PropTypes.string.isRequired,
+            description: PropTypes.string.isRequired,
+        })
+    ).isRequired,
+};
+

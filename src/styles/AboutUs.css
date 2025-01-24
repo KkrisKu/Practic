@@ -1,0 +1,28 @@
+.about-us-container {
+    background: darkslategray;
+    color: white;
+    padding: 20px;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.main-title {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.company-info h2 {
+    font-size: 28px;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+.company-info p {
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.company-info strong {
+    color: #4CAF50;
+}

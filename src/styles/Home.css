@@ -98,19 +98,20 @@
     padding: 60px 20px;
 }
 
-.feature-card {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
+.features-section .feature-card {
+    max-width: 300px;
+    margin: 0 auto;
 }
 
-.feature-card .card-body {
-    display: flex;
-    flex-direction: column;
-    flex-grow: 1;
+@media (max-width: 768px) {
+    .features-section .feature-card {
+        max-width: 90%;
+    }
 }
 
-.feature-card .card-text {
-    flex-grow: 1;
+@media (max-width: 576px) {
+    .features-section .feature-card {
+        max-width: 100%;
+    }
 }
 
