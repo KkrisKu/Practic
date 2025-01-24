@@ -1,18 +1,17 @@
-import { Container, Row, Col, Button, Card } from 'react-bootstrap';
+import { Container, Row, Col } from 'react-bootstrap';
+import Hero from '../components/Hero.jsx'
+import FeatureCard from '../components/FeatureCard.jsx'
 import '../styles/Home.css';
 
 export default function Home() {
     return (
         <div className="home-page">
-            <div className="hero">
-                <img src="/images/photo-man.jpg" alt="Фонове зображення" className="hero-image"/>
-                <div className="hero-text-container">
-                    <h1 className="hero-title">Learn WordPress the easy way.</h1>
-                    <p className="hero-description">Learn WordPress basics
-                        right here in about an hour!</p>
-                    <button className="hero-button">Start Learning Now</button>
-                </div>
-            </div>
+            <Hero
+                title="Learn WordPress the easy way."
+                description="Learn WordPress basics right here in about an hour!"
+                buttonText="Start Learning Now"
+                image="/images/photo-man.jpg"
+            />
 
             <div className="features-section">
                 <Container>
@@ -20,56 +19,29 @@ export default function Home() {
                         We provide you with the right tools to interact confidently.
                     </h2>
                     <Row>
-                        <Col md={4}>
-                            <Card className="feature-card">
-                                <Card.Img
-                                    variant="top"
-                                    src='/images/working.jpg'
-                                    alt="Skills"
-                                />
-                                <Card.Body>
-                                    <Card.Title>Skills</Card.Title>
-                                    <Card.Text>
-                                        Practise your listening, reading, and speaking skills with
-                                        audio and video materials.
-                                    </Card.Text>
-                                    <Button style={{ backgroundColor: '#4CAF50', border: 'none' }}>Start learning</Button>
-                                </Card.Body>
-                            </Card>
+                        <Col md={4} className="d-flex">
+                            <FeatureCard
+                                title="Skills"
+                                text="Practise your listening, reading, and speaking skills with audio and video materials."
+                                image="/images/working.jpg"
+                                buttonText="Start learning"
+                            />
                         </Col>
-                        <Col md={4}>
-                            <Card className="feature-card">
-                                <Card.Img
-                                    variant="top"
-                                    src='/images/man-working1.jpg'
-                                    alt="Grammar"
-                                />
-                                <Card.Body>
-                                    <Card.Title>Grammar</Card.Title>
-                                    <Card.Text>
-                                        Improve your grammar and increase your confidence with
-                                        clear explanations and exercises.
-                                    </Card.Text>
-                                    <Button style={{ backgroundColor: '#4CAF50', border: 'none' }}>Start learning</Button>
-                                </Card.Body>
-                            </Card>
+                        <Col md={4} className="d-flex">
+                            <FeatureCard
+                                title="Grammar"
+                                text="Improve your grammar and increase your confidence with clear explanations and exercises."
+                                image="/images/man-working1.jpg"
+                                buttonText="Start learning"
+                            />
                         </Col>
-                        <Col md={4}>
-                            <Card className="feature-card">
-                                <Card.Img
-                                    variant="top"
-                                    src='/images/man-working2.jpg'
-                                    alt="Vocabulary"
-                                />
-                                <Card.Body>
-                                    <Card.Title>Vocabulary</Card.Title>
-                                    <Card.Text>
-                                        Learn new words and improve your vocabulary to communicate
-                                        effectively.
-                                    </Card.Text>
-                                    <Button style={{ backgroundColor: '#4CAF50', border: 'none' }}>Start learning</Button>
-                                </Card.Body>
-                            </Card>
+                        <Col md={4} className="d-flex">
+                            <FeatureCard
+                                title="Vocabulary"
+                                text="Learn new words and improve your vocabulary to communicate effectively."
+                                image="/images/man-working2.jpg"
+                                buttonText="Start learning"
+                            />
                         </Col>
                     </Row>
                 </Container>
