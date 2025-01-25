@@ -4,13 +4,9 @@ import {
     MDBRow,
     MDBCard,
     MDBCardBody,
-    MDBInput,
-    MDBDropdown,
-    MDBDropdownMenu,
-    MDBDropdownToggle,
-    MDBDropdownItem
+    MDBInput
 } from 'mdb-react-ui-kit';
-import '../styles/Login.css';
+import '../styles/Registration.css';
 
 function Login() {
     return (
@@ -26,14 +22,15 @@ function Login() {
                             id="email"
                             type="email"
                         />
-                        <MDBDropdown className="mb-3">
-                            <MDBDropdownToggle>Choose your course</MDBDropdownToggle>
-                            <MDBDropdownMenu>
-                                <MDBDropdownItem>Course 1</MDBDropdownItem>
-                                <MDBDropdownItem>Course 2</MDBDropdownItem>
-                                <MDBDropdownItem>Course 3</MDBDropdownItem>
-                            </MDBDropdownMenu>
-                        </MDBDropdown>
+                        <div className="mb-3">
+                            <label htmlFor="subject-select" className="form-label fw-bold">Choose your Course</label>
+                            <select id="subject-select" className="form-select form-select-sm custom-select">
+                                <option value="" disabled selected>Choose option</option>
+                                <option value="1">Course 1</option>
+                                <option value="2">Course 2</option>
+                                <option value="3">Course 3</option>
+                            </select>
+                        </div>
                         <div className="text-center">
                             <MDBBtn className="custom-btn mb-3" size="md">Login</MDBBtn>
                         </div>
