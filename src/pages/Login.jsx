@@ -4,9 +4,9 @@ import {
     MDBRow,
     MDBCard,
     MDBCardBody,
-    MDBInput
 } from 'mdb-react-ui-kit';
 import { useState } from 'react';
+import { InputField } from '../components/FormComponents';
 import '../styles/Registration.css';
 
 function Login() {
@@ -14,7 +14,7 @@ function Login() {
         username: '',
         email: '',
         password: '',
-        course: ''
+        course: '',
     });
     const [errors, setErrors] = useState({});
 
@@ -71,41 +71,33 @@ function Login() {
                     <MDBCardBody>
                         <h3 className="fw-bold text-center mb-4">Login</h3>
                         <form onSubmit={handleSubmit}>
-                            {errors.username && <div className="text-danger mb-1">{errors.username}</div>}
-                            <MDBInput
-                                wrapperClass="mb-3"
-                                placeholder="Username"
-                                size="md"
+                            <InputField
                                 id="username"
                                 type="text"
+                                placeholder="Username"
                                 value={formData.username}
                                 onChange={handleChange}
+                                error={errors.username}
                             />
-
-                            {errors.email && <div className="text-danger mb-1">{errors.email}</div>}
-                            <MDBInput
-                                wrapperClass="mb-3"
-                                placeholder="Email"
-                                size="md"
+                            <InputField
                                 id="email"
                                 type="email"
+                                placeholder="Email"
                                 value={formData.email}
                                 onChange={handleChange}
+                                error={errors.email}
                             />
-
-                            {errors.password && <div className="text-danger mb-1">{errors.password}</div>}
-                            <MDBInput
-                                wrapperClass="mb-3"
-                                placeholder="Password"
-                                size="md"
+                            <InputField
                                 id="password"
                                 type="password"
+                                placeholder="Password"
                                 value={formData.password}
                                 onChange={handleChange}
+                                error={errors.password}
                             />
 
-                            {errors.course && <div className="text-danger mb-1">{errors.course}</div>}
                             <div className="mb-3">
+                                {errors.course && <div className="text-danger mb-1">{errors.course}</div>}
                                 <label htmlFor="course" className="form-label fw-bold">Choose your Course</label>
                                 <select
                                     id="course"
@@ -136,4 +128,3 @@ function Login() {
 }
 
 export default Login;
-

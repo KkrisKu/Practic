@@ -2,15 +2,13 @@ import {
     MDBBtn,
     MDBContainer,
     MDBRow,
-    MDBCol,
     MDBCard,
     MDBCardBody,
-    MDBInput,
-    MDBRadio
 } from 'mdb-react-ui-kit';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import '../styles/Registration.css';
+import { InputField, RadioGroup } from '../components/FormComponents';
+import '../styles/Registration.css'
 
 function Registration() {
     const [formData, setFormData] = useState({
@@ -21,7 +19,7 @@ function Registration() {
         gender: '',
         password: '',
         confirmPassword: '',
-        course: ''
+        course: '',
     });
     const [errors, setErrors] = useState({});
 
@@ -32,19 +30,16 @@ function Registration() {
 
     const validateForm = () => {
         const newErrors = {};
-
         if (!formData.username) {
             newErrors.username = 'Username is required';
         } else if (formData.username.length < 3) {
             newErrors.username = 'Username must be at least 3 characters';
         }
-
         if (!formData.email) {
             newErrors.email = 'Email is required';
         } else if (!formData.email.includes('@')) {
             newErrors.email = 'Email must contain @';
         }
-
         if (!formData.password) {
             newErrors.password = 'Password is required';
         } else {
@@ -64,13 +59,11 @@ function Registration() {
                 newErrors.password = 'Password must contain only Latin letters and numbers';
             }
         }
-
         if (!formData.confirmPassword) {
             newErrors.confirmPassword = 'Confirm password is required';
         } else if (formData.password !== formData.confirmPassword) {
             newErrors.confirmPassword = 'Passwords do not match';
         }
-
         if (!formData.course) {
             newErrors.course = 'Course selection is required';
         }
@@ -88,139 +81,98 @@ function Registration() {
 
     return (
         <MDBContainer fluid className="registration-container">
-            <MDBRow className='justify-content-center align-items-center m-5'>
+            <MDBRow className="justify-content-center align-items-center m-5">
                 <MDBCard style={{ maxWidth: '500px', padding: '20px' }}>
                     <MDBCardBody>
                         <h3 className="fw-bold text-center mb-4">Registration Form</h3>
                         <form onSubmit={handleSubmit}>
-                            <MDBRow>
-                                <MDBCol md='12'>
-                                    {errors.username && <div className="text-danger mb-1">{errors.username}</div>}
-                                    <MDBInput
-                                        wrapperClass='mb-3'
-                                        placeholder='Username'
-                                        size='md'
-                                        id='username'
-                                        type='text'
-                                        value={formData.username}
-                                        onChange={handleChange}
-                                    />
-                                </MDBCol>
-                            </MDBRow>
-                            <MDBRow>
-                                <MDBCol md='12'>
-                                    <MDBInput
-                                        wrapperClass='mb-3'
-                                        placeholder='Birthday'
-                                        size='md'
-                                        id='birthday'
-                                        type='date'
-                                        value={formData.birthday}
-                                        onChange={handleChange}
-                                    />
-                                </MDBCol>
-                            </MDBRow>
-                            <MDBRow>
-                                <MDBCol md='12' className='mb-3'>
-                                    <h6 className="fw-bold mb-2">Gender:</h6>
-                                    <MDBRadio
-                                        name='gender'
-                                        id='gender'
-                                        value='female'
-                                        label='Female'
-                                        inline
-                                        onChange={handleChange}
-                                    />
-                                    <MDBRadio
-                                        name='gender'
-                                        id='gender'
-                                        value='male'
-                                        label='Male'
-                                        inline
-                                        onChange={handleChange}
-                                    />
-                                    <MDBRadio
-                                        name='gender'
-                                        id='gender'
-                                        value='other'
-                                        label='Other'
-                                        inline
-                                        onChange={handleChange}
-                                    />
-                                </MDBCol>
-                            </MDBRow>
-                            <MDBRow>
-                                <MDBCol md='6'>
-                                    {errors.email && <div className="text-danger mb-1">{errors.email}</div>}
-                                    <MDBInput
-                                        wrapperClass='mb-3'
-                                        placeholder='Email'
-                                        size='md'
-                                        id='email'
-                                        type='email'
-                                        value={formData.email}
-                                        onChange={handleChange}
-                                    />
-                                </MDBCol>
-                                <MDBCol md='6'>
-                                    <MDBInput
-                                        wrapperClass='mb-3'
-                                        placeholder='Phone Number'
-                                        size='md'
-                                        id='phone'
-                                        type='tel'
-                                        value={formData.phone}
-                                        onChange={handleChange}
-                                    />
-                                </MDBCol>
-                            </MDBRow>
-                            <MDBRow>
-                                <MDBCol md='6'>
-                                    {errors.password && <div className="text-danger mb-1">{errors.password}</div>}
-                                    <MDBInput
-                                        wrapperClass='mb-3'
-                                        placeholder='Password'
-                                        size='md'
-                                        id='password'
-                                        type='password'
-                                        value={formData.password}
-                                        onChange={handleChange}
-                                    />
-                                </MDBCol>
-                                <MDBCol md='6'>
-                                    {errors.confirmPassword && <div className="text-danger mb-1">{errors.confirmPassword}</div>}
-                                    <MDBInput
-                                        wrapperClass='mb-3'
-                                        placeholder='Confirm Password'
-                                        size='md'
-                                        id='confirmPassword'
-                                        type='password'
-                                        value={formData.confirmPassword}
-                                        onChange={handleChange}
-                                    />
-                                </MDBCol>
-                            </MDBRow>
+                            <InputField
+                                id="username"
+                                type="text"
+                                placeholder="Username"
+                                value={formData.username}
+                                onChange={handleChange}
+                                error={errors.username}
+                            />
+                            <InputField
+                                id="birthday"
+                                type="date"
+                                placeholder="Birthday"
+                                value={formData.birthday}
+                                onChange={handleChange}
+                            />
+                            <RadioGroup
+                                name="gender"
+                                label="Gender"
+                                options={[
+                                    { value: 'female', label: 'Female' },
+                                    { value: 'male', label: 'Male' },
+                                    { value: 'other', label: 'Other' },
+                                ]}
+                                selectedValue={formData.gender}
+                                onChange={(e) => setFormData({ ...formData, gender: e.target.value })}
+                            />
+                            <InputField
+                                id="email"
+                                type="email"
+                                placeholder="Email"
+                                value={formData.email}
+                                onChange={handleChange}
+                                error={errors.email}
+                            />
+                            <InputField
+                                id="phone"
+                                type="tel"
+                                placeholder="Phone Number"
+                                value={formData.phone}
+                                onChange={handleChange}
+                            />
+                            <InputField
+                                id="password"
+                                type="password"
+                                placeholder="Password"
+                                value={formData.password}
+                                onChange={handleChange}
+                                error={errors.password}
+                            />
+                            <InputField
+                                id="confirmPassword"
+                                type="password"
+                                placeholder="Confirm Password"
+                                value={formData.confirmPassword}
+                                onChange={handleChange}
+                                error={errors.confirmPassword}
+                            />
                             <div className="mb-3">
                                 {errors.course && <div className="text-danger mb-1">{errors.course}</div>}
-                                <label htmlFor="course" className="form-label fw-bold">Choose a Course</label>
+                                <label htmlFor="course" className="form-label fw-bold">
+                                    Choose a Course
+                                </label>
                                 <select
                                     id="course"
                                     className="form-select form-select-sm custom-select"
                                     value={formData.course}
                                     onChange={handleChange}
                                 >
-                                    <option value="" disabled>Choose option</option>
+                                    <option value="" disabled>
+                                        Choose option
+                                    </option>
                                     <option value="1">Subject 1</option>
                                     <option value="2">Subject 2</option>
                                     <option value="3">Subject 3</option>
                                 </select>
                             </div>
                             <div className="text-center">
-                                <MDBBtn className='custom-btn mb-3' size='md' type='submit'>Submit</MDBBtn>
+                                <MDBBtn className="custom-btn mb-3" size="md" type="submit">
+                                    Submit
+                                </MDBBtn>
                             </div>
                         </form>
                         <p className="text-center">
-                            Already registered? <Link to="/login" className="login-link">Login here</Link>
+                            Already registered?{' '}
+                            <Link to="/login" className="login-link">
+                                Login here
+                            </Link>
                         </p>
                     </MDBCardBody>
                 </MDBCard>
@@ -230,6 +182,9 @@ function Registration() {
 }
 
 export default Registration;
+
+
+
 
 
 

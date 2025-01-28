@@ -1,15 +1,17 @@
 body {
     margin: 0;
     padding: 0;
-    height: 100vh;
+    min-height: 100vh;
     background: darkslategray;
+    display: flex;
+    flex-direction: column;
 }
 
 .registration-container {
+    flex-grow: 1;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
 }
 
 .MDBCard {
