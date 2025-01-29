@@ -13,7 +13,7 @@ export default function Header() {
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="me-auto">
                         <Nav.Link href="/">HOME</Nav.Link>
-                        <Nav.Link href="/courses">COURSES</Nav.Link>
+                        <Nav.Link href="/course">COURSES</Nav.Link>
                         <Nav.Link href="/about-us">ABOUT US</Nav.Link>
                         <Nav.Link href="/contacts">CONTACTS</Nav.Link>
                     </Nav>
