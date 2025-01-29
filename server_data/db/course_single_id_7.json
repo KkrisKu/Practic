@@ -1,0 +1,60 @@
+{
+  "id": 7,
+  "name": "Ruby on Rails for Beginners",
+  "type": "beginner",
+  "language": "Ruby",
+  "description": "Ruby on Rails is a server-side web application framework written in Ruby under the MIT License.",
+  "duration": "6 months",
+  "author": "Ruby on Rails",
+  "price": 59.99,
+  "instructor": "David Heinemeier Hansson",
+  "rating": 4.6,
+  "reviews": 80,
+  "image": "https://example.com/course7.jpg",
+  "video": "https://example.com/course7.mp4",
+  "tags": ["programming", "Ruby"],
+  "course_info": "<p>Welcome to the &quot;Ruby on Rails for Beginners&quot; course! Are you ready to take your knowledge and career to the next level?</p><p>25 hours of on-demand videos, 35 coding exercises, 50 quizzes, and 8 assignments. All this is to help you start coding in Ruby on Rails like a pro.</p><p>I'm a Rails developer with over 10 years of experience. I will help you on this journey every step of the way, no matter if you are a complete beginner who has never coded before or a developer who wants to advance to the next level. We will start from the basics, but we will not stop there.</p><p>I will not only teach you how to code but also how to code well. Clean code and good design will be our priorities, and design patterns will be shown in practice, not as abstract concepts that seem impossible to be used in real-life challenges. Refactoring will be something we practice all the time.</p>",
+  "course_content": {
+    "section1": {
+      "title": "Introduction to Ruby",
+      "content": "In this section, we will learn the basics of Ruby programming language.",
+      "duration": "3 hours"
+    },
+    "section2": {
+      "title": "Getting Started with Rails",
+      "content": "Set up your development environment and create your first Rails application.",
+      "duration": "2 hours"
+    },
+    "section3": {
+      "title": "Rails MVC Architecture",
+      "content": "Understand the Model-View-Controller architecture in Rails applications.",
+      "duration": "2 hours"
+    },
+    "section4": {
+      "title": "Database Migrations",
+      "content": "Learn how to use Rails migrations to manage your database schema.",
+      "duration": "2 hours"
+    },
+    "section5": {
+      "title": "Building RESTful Applications",
+      "content": "Develop RESTful web services using Rails.",
+      "duration": "2 hours"
+    },
+    "section6": {
+      "title": "Rails Associations",
+      "content": "Explore associations between models in Rails.",
+      "duration": "2 hours"
+    },
+    "section7": {
+      "title": "Testing with RSpec",
+      "content": "Learn testing techniques using RSpec in Rails applications.",
+      "duration": "2 hours"
+    },
+    "section8": {
+      "title": "Deploying Rails Applications",
+      "content": "Deploy your Rails application to a production environment.",
+      "duration": "2 hours"
+    }
+  }
+}
+

@@ -1,0 +1,80 @@
+{
+  "id": 1,
+  "name": "Beginner's Guide to C#",
+  "type": "beginner",
+  "language": "C#",
+  "description": "C# is ax general-purpose, multi-paradigm programming language. It was created by Microsoft to develop applications for the .NET Framework and .NET Core.",
+  "duration": "6 months",
+  "author": "Microsoft",
+  "price": 99.99,
+  "instructor": "John Doe",
+  "rating": 4.5,
+  "reviews": 100,
+  "image": "https://example.com/course1.jpg",
+  "video": "https://example.com/course1.mp4",
+  "tags": ["programming", "C#"],
+  "course_info": "<p>Welcome to the &quot;Ultimate C# Masterclass&quot; course! Are you ready to take your knowledge and career to the next level?</p><p>47 hours of on-demand videos, 67 coding exercises, 89 quizzes, and 16 assignments. All this is to help you start coding in C# like a pro.</p><p>I'm a .NET Technical Lead with over 10 years of professional experience. I will help you on this journey every step of the way, no matter if you are a complete beginner who has never coded before or a developer who wants to advance to the next level. We will start from the basics, but we will not stop there.</p><p>I will not only teach you how to code but also how to code well. Clean code and good design will be our priorities, and design patterns will be shown in practice, not as abstract concepts that seem impossible to be used in real-life challenges. Refactoring will be something we practice all the time.</p><p>Programs written in C# are fast, but we can make them faster. The performance will be discussed in detail. Asynchrony and multithreading will help us improve it even more.</p><p>You will learn more than C# syntax. It is not only a course about the language but a course about programming in general. You will understand why all the things we learn are needed and how to use them right. Moreover, I will show you how they work under the hood, and thanks to that, you will gain an in-depth understanding of C#. This course also covers the development of unit tests using NUnit and Moq libraries.</p><p>Practice makes perfect. You will solve dozens of coding exercises right in the browser. You will also implement coding assignments, such as a program processing the data read from an external API or an app for analyzing PDF files. You will also solidify your knowledge by solving short quizzes as well as doing final knowledge checks after each section.</p>",
+  "course_content": {
+    "section1": {
+      "title": "Getting Started",
+      "content": "In this section, we will learn the basics of C# programming language.",
+      "duration": "3 hours"
+    },
+    "section2": {
+      "title": "Variables and Data Types",
+      "content": "In this section, we will learn about variables and data types in C#.",
+      "duration": "2 hours"
+    },
+    "section3": {
+      "title": "Operators and Control Structures",
+      "content": "In this section, we will learn about operators and control structures in C#.",
+      "duration": "2 hours"
+    },
+    "section4": {
+      "title": "Methods and Functions",
+      "content": "In this section, we will learn about methods and functions in C#.",
+      "duration": "2 hours"
+    },
+    "section5": {
+      "title": "Classes and Objects",
+      "content": "In this section, we will learn about classes and objects in C#.",
+      "duration": "2 hours"
+    },
+    "section6": {
+      "title": "Inheritance and Polymorphism",
+      "content": "In this section, we will learn about inheritance and polymorphism in C#.",
+      "duration": "2 hours"
+    },
+    "section7": {
+      "title": "Exceptions and Error Handling",
+      "content": "In this section, we will learn about exceptions and error handling in C#.",
+      "duration": "2 hours"
+    },
+    "section8": {
+      "title": "Generics and Collections",
+      "content": "In this section, we will learn about generics and collections in C#.",
+      "duration": "2 hours"
+    },
+    "section9": {
+      "title": "File and Network I/O",
+      "content": "In this section, we will learn about file and network I/O in C#.",
+      "duration": "2 hours"
+    },
+    "section10": {
+      "title": "Threading and Parallel Programming",
+      "content": "In this section, we will learn about threading and parallel programming in C#.",
+      "duration": "2 hours"
+    },
+    "section11": {
+      "title": "Reflection and Dynamic Programming",
+      "content": "In this section, we will learn about reflection and dynamic programming in C#.",
+      "duration": "2 hours"
+    },
+    "section12": {
+      "title": "Final Project",
+      "content": "In this section, we will learn about final project in C#.",
+      "duration": "4 hours"
+    }
+  }
+}
+

@@ -1,0 +1,94 @@
+{
+  "id": 6,
+  "name": "SQL for Advanced Learners",
+  "type": "advanced",
+  "language": "SQL",
+  "description": "SQL is a domain-specific language used in programming and designed for managing data held in a relational database management system.",
+  "duration": "3 months",
+  "author": "Oracle",
+  "price": 79.99,
+  "instructor": "Larry Ellison",
+  "rating": 4.2,
+  "reviews": 50,
+  "image": "https://example.com/course6.jpg",
+  "video": "https://example.com/course6.mp4",
+  "tags": ["programming", "SQL"],
+  "course_info": "<p>Welcome to the &quot;SQL for Advanced Learners&quot; course! Are you ready to take your knowledge and career to the next level?</p><p>20 hours of on-demand videos, 30 coding exercises, 40 quizzes, and 10 assignments. All this is to help you start coding in SQL like a pro.</p><p>I'm an Oracle developer with over 15 years of experience. I will help you on this journey every step of the way, no matter if you are a complete beginner who has never coded before or a developer who wants to advance to the next level. We will start from the basics, but we will not stop there.</p><p>I will not only teach you how to code but also how to code well. Clean code and good design will be our priorities, and design patterns will be shown in practice, not as abstract concepts that seem impossible to be used in real-life challenges. Refactoring will be something we practice all the time.</p>",
+  "course_content": {
+    "section1": {
+      "title": "Advanced Querying",
+      "content": "In this section, we will learn about advanced querying in SQL.",
+      "duration": "2 hours"
+    },
+    "section2": {
+      "title": "Indexing and Optimizing",
+      "content": "In this section, we will learn about indexing and optimizing in SQL.",
+      "duration": "2 hours"
+    },
+    "section3": {
+      "title": "Subqueries and Joining",
+      "content": "In this section, we will learn about subqueries and joining in SQL.",
+      "duration": "2 hours"
+    },
+    "section4": {
+      "title": "Stored Procedures and Functions",
+      "content": "In this section, we will learn about stored procedures and functions in SQL.",
+      "duration": "2 hours"
+    },
+    "section5": {
+      "title": "Triggers and Views",
+      "content": "In this section, we will learn about triggers and views in SQL.",
+      "duration": "2 hours"
+    },
+    "section6": {
+      "title": "Normalizing and Denormalizing",
+      "content": "In this section, we will learn about normalizing and denormalizing in SQL.",
+      "duration": "2 hours"
+    },
+    "section7": {
+      "title": "Data Modeling and Database Design",
+      "content": "In this section, we will learn about data modeling and database design in SQL.",
+      "duration": "2 hours"
+    },
+    "section8": {
+      "title": "Security and Authorization",
+      "content": "In this section, we will learn about security and authorization in SQL.",
+      "duration": "2 hours"
+    },
+    "section9": {
+      "title": "Advanced Topics",
+      "content": "In this section, we will learn about advanced topics in SQL.",
+      "duration": "2 hours"
+    },
+    "section10": {
+      "title": "Final Project",
+      "content": "In this section, we will learn about final project in SQL.",
+      "duration": "4 hours"
+    },
+    "section11": {
+      "title": "SQL Performance Tuning",
+      "content": "In this section, we will learn about performance tuning in SQL.",
+      "duration": "2 hours"
+    },
+    "section12": {
+      "title": "Data Warehousing",
+      "content": "In this section, we will learn about data warehousing concepts in SQL.",
+      "duration": "2 hours"
+    },
+    "section13": {
+      "title": "SQL for Big Data",
+      "content": "In this section, we will learn how SQL is applied in big data environments.",
+      "duration": "2 hours"
+    },
+    "section14": {
+      "title": "Machine Learning with SQL",
+      "content": "In this section, we will explore how SQL can be used in machine learning applications.",
+      "duration": "2 hours"
+    },
+    "section15": {
+      "title": "SQL and Cloud Databases",
+      "content": "In this section, we will learn about using SQL with cloud databases.",
+      "duration": "2 hours"
+    }
+  }
+}

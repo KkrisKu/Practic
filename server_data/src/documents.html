@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API Routes</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+        }
+        th {
+            background-color: #f2f2f2;
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+    <h1>API Routes</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>URL</th>
+                <th>Body for Request</th>
+                <th>Response</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Auth API Routes -->
+            <tr>
+                <td>POST /api/v1/auth/login</td>
+                <td>{"login": "string", "password": "string"}</td>
+                <td>{"status": 200, "body": {user object}, "message": "User found"} or {"status": 404, "body": null, "message": "User not found"}</td>
+            </tr>
+            <tr>
+                <td>POST /api/v1/auth/register</td>
+                <td>{"username": "string", "email": "string", "password": "string", "role": "string"}</td>
+                <td>{"status": 201, "body": {new user object}, "message": "User created"}</td>
+            </tr>
+            <!-- User API Routes -->
+            <tr>
+                <td>GET /api/v1/user/</td>
+                <td>None</td>
+                <td>{"status": 200, "body": [user objects], "message": "Users list returned"}</td>
+            </tr>
+            <tr>
+                <td>GET /api/v1/user/:id</td>
+                <td>None</td>
+                <td>{"status": 200, "body": {user object}, "message": "User found"} or {"status": 404, "body": null, "message": "User not found"}</td>
+            </tr>
+            <tr>
+                <td>POST /api/v1/user/</td>
+                <td>{"username": "string", "email": "string", "password": "string", "role": "string"}</td>
+                <td>{"status": 201, "body": {new user object}, "message": "User created"}</td>
+            </tr>
+            <tr>
+                <td>PUT /api/v1/user/:id</td>
+                <td>{"username": "string", "email": "string", "password": "string", "role": "string"}</td>
+                <td>{"status": 200, "body": {updated user object}, "message": "User updated"} or {"status": 404, "body": null, "message": "User not found"}</td>
+            </tr>
+            <tr>
+                <td>DELETE /api/v1/user/:id</td>
+                <td>None</td>
+                <td>{"status": 200, "body": null, "message": "User deleted"} or {"status": 404, "body": null, "message": "User not found"}</td>
+            </tr>
+            <!-- Course API Routes -->
+            <tr>
+                <td>GET /api/v1/course/</td>
+                <td>None</td>
+                <td>{"status": 200, "body": [course objects], "message": "Courses list returned"}</td>
+            </tr>
+            <tr>
+                <td>GET /api/v1/course/:id</td>
+                <td>None</td>
+                <td>{"status": 200, "body": {course object}, "message": "Course found"} or {"status": 404, "body": null, "message": "Course not found"}</td>
+            </tr>
+            <tr>
+                <td>POST /api/v1/course/</td>
+                <td>{"name": "string", "type": "string", "language": "string", "description": "string", "duration": "string", "author": "string"}</td>
+                <td>{"status": 201, "body": {new course object}, "message": "Course created"}</td>
+            </tr>
+            <tr>
+                <td>PUT /api/v1/course/:id</td>
+                <td>{"name": "string", "type": "string", "language": "string", "description": "string", "duration": "string", "author": "string"}</td>
+                <td>{"status": 200, "body": {updated course object}, "message": "Course updated"} or {"status": 404, "body": null, "message": "Course not found"}</td>
+            </tr>
+            <tr>
+                <td>DELETE /api/v1/course/:id</td>
+                <td>None</td>
+                <td>{"status": 200, "body": null, "message": "Course deleted"} or {"status": 404, "body": null, "message": "Course not found"}</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
+

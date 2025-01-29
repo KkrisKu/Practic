@@ -1,0 +1,79 @@
+{
+  "id": 8,
+  "name": "Swift for Beginners",
+  "type": "beginner",
+  "language": "Swift",
+  "description": "Swift is a general-purpose, multi-paradigm programming language developed by Apple Inc.",
+  "duration": "4 months",
+  "author": "Apple",
+  "price": 49.99,
+  "instructor": "John Doe",
+  "rating": 4.3,
+  "reviews": 50,
+  "image": "https://example.com/course8.jpg",
+  "video": "https://example.com/course8.mp4",
+  "tags": ["programming", "Swift"],
+  "course_info": "<p>Welcome to the &quot;Swift for Beginners&quot; course! Are you ready to take your knowledge and career to the next level?</p><p>24 hours of on-demand videos, 40 coding exercises, 60 quizzes, and 12 assignments. All this is to help you start coding in Swift like a pro.</p><p>I'm a Swift developer with over 5 years of experience. I will help you on this journey every step of the way, no matter if you are a complete beginner who has never coded before or a developer who wants to advance to the next level. We will start from the basics, but we will not stop there.</p><p>I will not only teach you how to code but also how to code well. Clean code and good design will be our priorities, and design patterns will be shown in practice, not as abstract concepts that seem impossible to be used in real-life challenges. Refactoring will be something we practice all the time.</p>",
+  "course_content": {
+    "section1": {
+      "title": "Getting Started",
+      "content": "In this section, we will learn the basics of Swift programming language.",
+      "duration": "3 hours"
+    },
+    "section2": {
+      "title": "Variables and Data Types",
+      "content": "In this section, we will learn about variables and data types in Swift.",
+      "duration": "2 hours"
+    },
+    "section3": {
+      "title": "Control Structures",
+      "content": "In this section, we will learn about control structures in Swift.",
+      "duration": "2 hours"
+    },
+    "section4": {
+      "title": "Functions",
+      "content": "In this section, we will learn about functions in Swift.",
+      "duration": "2 hours"
+    },
+    "section5": {
+      "title": "Object-Oriented Programming",
+      "content": "In this section, we will learn about object-oriented programming in Swift.",
+      "duration": "2 hours"
+    },
+    "section6": {
+      "title": "Error Handling",
+      "content": "In this section, we will learn about error handling in Swift.",
+      "duration": "2 hours"
+    },
+    "section7": {
+      "title": "Closures and Higher-Order Functions",
+      "content": "In this section, we will learn about closures and higher-order functions in Swift.",
+      "duration": "2 hours"
+    },
+    "section8": {
+      "title": "Testing and Debugging",
+      "content": "In this section, we will learn about testing and debugging in Swift.",
+      "duration": "2 hours"
+    },
+    "section9": {
+      "title": "Advanced Topics",
+      "content": "In this section, we will learn about advanced topics in Swift.",
+      "duration": "2 hours"
+    },
+    "section10": {
+      "title": "Final Project",
+      "content": "In this section, we will learn about final project in Swift.",
+      "duration": "4 hours"
+    },
+    "section11": {
+      "title": "Working with UIKit",
+      "content": "In this section, we will learn about working with UIKit in Swift.",
+      "duration": "2 hours"
+    },
+    "section12": {
+      "title": "Core Data",
+      "content": "In this section, we will learn about Core Data in Swift.",
+      "duration": "2 hours"
+    }
+  }
+}

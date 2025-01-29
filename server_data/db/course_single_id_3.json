@@ -1,0 +1,60 @@
+{
+  "id": 3,
+  "name": "Advanced Python",
+  "type": "advanced",
+  "language": "Python",
+  "description": "Python is a high-level, general-purpose programming language. Its design philosophy emphasizes code readability with its use of significant indentation.",
+  "duration": "7 months",
+  "author": "Python Software Foundation",
+  "price": 149.99,
+  "instructor": "Guido van Rossum",
+  "rating": 4.7,
+  "reviews": 200,
+  "image": "https://example.com/course3.jpg",
+  "video": "https://example.com/course3.mp4",
+  "tags": ["programming", "Python"],
+  "course_info": "<p>Welcome to the Advanced Python course! This course will expand your Python knowledge, covering advanced topics and practical applications.</p><p>50 hours of on-demand videos, 60 coding exercises, 80 quizzes, and 15 assignments to further your expertise in Python development.</p><p>Led by an experienced Python developer with over 20 years of experience. Perfect for those looking to master Python programming.</p>",
+  "course_content": {
+    "section1": {
+      "title": "Advanced Data Structures",
+      "content": "Explore advanced data structures and their applications in Python.",
+      "duration": "5 hours"
+    },
+    "section2": {
+      "title": "Decorators and Generators",
+      "content": "Learn about Python decorators and generators for efficient code.",
+      "duration": "4 hours"
+    },
+    "section3": {
+      "title": "Concurrency and Multithreading",
+      "content": "Understand concurrency and multithreading in Python applications.",
+      "duration": "3 hours"
+    },
+    "section4": {
+      "title": "Python Libraries",
+      "content": "Master popular Python libraries for data analysis and visualization.",
+      "duration": "3 hours"
+    },
+    "section5": {
+      "title": "Web Development with Django",
+      "content": "Develop web applications using the Django framework.",
+      "duration": "4 hours"
+    },
+    "section6": {
+      "title": "Testing with PyTest",
+      "content": "Learn testing techniques using the PyTest library.",
+      "duration": "3 hours"
+    },
+    "section7": {
+      "title": "Best Practices in Python",
+      "content": "Discuss Python best practices for writing efficient and maintainable code.",
+      "duration": "2 hours"
+    },
+    "section8": {
+      "title": "Capstone Project",
+      "content": "Apply all the skills learned in a comprehensive capstone project.",
+      "duration": "6 hours"
+    }
+  }
+}
+

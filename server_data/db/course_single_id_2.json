@@ -1,0 +1,110 @@
+{
+
+  "id": 2,
+  "name": "Intermediate Java",
+  "type": "intermediate",
+  "language": "Java",
+  "description": "Java is a high-level, class-based, object-oriented programming language that is designed to have as few implementation dependencies as possible.",
+  "duration": "8 months",
+  "author": "Oracle",
+  "price": 129.99,
+  "instructor": "Jane Smith",
+  "rating": 4.4,
+  "reviews": 150,
+  "image": "https://example.com/course2.jpg",
+  "video": "https://example.com/course2.mp4",
+  "tags": ["programming", "Java"],
+  "course_info": "<p>Welcome to the Intermediate C# course! This course will enhance your knowledge of Java, covering advanced topics and best practices.</p><p>60 hours of on-demand videos, 50 coding exercises, 70 quizzes, and 12 assignments to further your expertise in Java development.</p><p>Led by an experienced Java developer with over 15 years of experience. Perfect for those looking to advance their Java skills.</p>",
+  "course_content": {
+    "section1": {
+      "title": "Advanced Object-Oriented Concepts",
+      "content": "In this section, we will dive deeper into object-oriented programming.",
+      "duration": "5 hours"
+    },
+    "section2": {
+      "title": "Java Collections Framework",
+      "content": "Explore the Java Collections Framework and learn how to work with data structures.",
+      "duration": "4 hours"
+    },
+    "section3": {
+      "title": "Concurrency and Multithreading",
+      "content": "Understand concurrency and multithreading in Java applications.",
+      "duration": "3 hours"
+    },
+    "section4": {
+      "title": "Java Stream API",
+      "content": "Learn how to use Java Stream API for efficient data processing.",
+      "duration": "3 hours"
+    },
+    "section5": {
+      "title": "Java I/O and NIO",
+      "content": "Master file handling and network operations using Java I/O and NIO packages.",
+      "duration": "3 hours"
+    },
+    "section6": {
+      "title": "Java Annotations and Reflection",
+      "content": "Discover Java annotations and reflection for advanced programming.",
+      "duration": "2 hours"
+    },
+    "section7": {
+      "title": "Building RESTful Services",
+      "content": "Develop RESTful web services using Java.",
+      "duration": "4 hours"
+    },
+    "section8": {
+      "title": "Testing with JUnit and Mockito",
+      "content": "Learn testing techniques using JUnit and Mockito libraries.",
+      "duration": "3 hours"
+    },
+    "section9": {
+      "title": "Java Best Practices",
+      "content": "Discuss best practices for efficient and maintainable Java code.",
+      "duration": "2 hours"
+    },
+    "section10": {
+      "title": "Capstone Project",
+      "content": "Apply all the skills learned in a comprehensive capstone project.",
+      "duration": "6 hours"
+    },
+    "section11": {
+      "title": "Java Advanced Topics",
+      "content": "Explore advanced topics in Java, such as lambda expressions, method references, and functional programming.",
+      "duration": "4 hours"
+    },
+    "section12": {
+      "title": "Java Debugging and Profiling",
+      "content": "Master debugging and profiling techniques in Java.",
+      "duration": "2 hours"
+    },
+    "section13": {
+      "title": "Java Memory Management",
+      "content": "Understand Java memory management and garbage collection.",
+      "duration": "2 hours"
+    },
+    "section14": {
+      "title": "Java Web Development",
+      "content": "Develop web applications using Java Servlet, JSP, and JSF.",
+      "duration": "4 hours"
+    },
+    "section15": {
+      "title": "Java Persistence API",
+      "content": "Master persistence in Java using JPA and Hibernate.",
+      "duration": "4 hours"
+    },
+    "section16": {
+      "title": "Java Security",
+      "content": "Understand Java security best practices and how to secure Java applications.",
+      "duration": "3 hours"
+    },
+    "section17": {
+      "title": "Java Performance Optimization",
+      "content": "Learn how to optimize the performance of Java applications.",
+      "duration": "2 hours"
+    },
+    "section18": {
+      "title": "Java Trends and Future",
+      "content": "Explore current trends and the future of Java programming.",
+      "duration": "2 hours"
+    }
+  }
+}

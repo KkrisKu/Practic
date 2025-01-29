@@ -1,0 +1,69 @@
+{
+  "id": 4,
+  "name": "PHP for Beginners",
+  "type": "beginner",
+  "language": "PHP",
+  "description": "PHP is a general-purpose, multi-paradigm programming language that is especially suited to web development.",
+  "duration": "4 months",
+  "author": "Laravel",
+  "price": 49.99,
+  "instructor": "Taylor Otwell",
+  "rating": 4.3,
+  "reviews": 50,
+  "image": "https://example.com/course4.jpg",
+  "video": "https://example.com/course4.mp4",
+  "tags": ["programming", "PHP"],
+  "course_info": "<p>Welcome to the &quot;PHP for Beginners&quot; course! Are you ready to take your knowledge and career to the next level?</p><p>24 hours of on-demand videos, 40 coding exercises, 60 quizzes, and 12 assignments. All this is to help you start coding in PHP like a pro.</p><p>I'm a Laravel developer with over 5 years of experience. I will help you on this journey every step of the way, no matter if you are a complete beginner who has never coded before or a developer who wants to advance to the next level. We will start from the basics, but we will not stop there.</p><p>I will not only teach you how to code but also how to code well. Clean code and good design will be our priorities, and design patterns will be shown in practice, not as abstract concepts that seem impossible to be used in real-life challenges. Refactoring will be something we practice all the time.</p>",
+  "course_content": {
+    "section1": {
+      "title": "Getting Started",
+      "content": "In this section, we will learn the basics of PHP programming language.",
+      "duration": "3 hours"
+    },
+    "section2": {
+      "title": "Variables and Data Types",
+      "content": "In this section, we will learn about variables and data types in PHP.",
+      "duration": "2 hours"
+    },
+    "section3": {
+      "title": "Control Structures",
+      "content": "In this section, we will learn about control structures in PHP.",
+      "duration": "2 hours"
+    },
+    "section4": {
+      "title": "Functions and Methods",
+      "content": "In this section, we will learn about functions and methods in PHP.",
+      "duration": "2 hours"
+    },
+    "section5": {
+      "title": "Working with Files and Databases",
+      "content": "In this section, we will learn about working with files and databases in PHP.",
+      "duration": "2 hours"
+    },
+    "section6": {
+      "title": "Object-Oriented Programming",
+      "content": "In this section, we will learn about object-oriented programming in PHP.",
+      "duration": "2 hours"
+    },
+    "section7": {
+      "title": "Working with Forms and Validation",
+      "content": "In this section, we will learn about working with forms and validation in PHP.",
+      "duration": "2 hours"
+    },
+    "section8": {
+      "title": "Security and Best Practices",
+      "content": "In this section, we will learn about security and best practices in PHP.",
+      "duration": "2 hours"
+    },
+    "section9": {
+      "title": "Advanced Topics",
+      "content": "In this section, we will learn about advanced topics in PHP.",
+      "duration": "2 hours"
+    },
+    "section10": {
+      "title": "Final Project",
+      "content": "In this section, we will learn about final project in PHP.",
+      "duration": "4 hours"
+    }
+  }
+}

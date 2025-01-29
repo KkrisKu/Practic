@@ -1,0 +1,135 @@
+[
+    {
+        "id": 1,
+        "username": "user1",
+        "email": "h3QOe@example.com",
+        "password": "password123",
+        "role": "student",
+        "courses": [1, 2, 3],
+        "phone": "1234567890",
+        "birthday": "1990-01-01",
+        "gender": "male"
+    },
+    {
+        "id": 2,
+        "username": "user2",
+        "email": "4T8tP@example.com",
+        "password": "password456",
+        "role": "student",
+        "courses": [4, 5, 6],
+        "phone": "9876543210",
+        "birthday": "1995-05-05",
+        "gender": "female"
+    },
+    {
+        "id": 3,
+        "username": "user3",
+        "email": "a1b2c@example.com",
+        "password": "password789",
+        "role": "student",
+        "courses": [7, 8],
+        "phone": "5551234567",
+        "birthday": "1992-03-15",
+        "gender": "female"
+    },
+    {
+        "id": 4,
+        "username": "user4",
+        "email": "d4e5f@example.com",
+        "password": "password012",
+        "role": "student",
+        "courses": [1, 4, 5],
+        "phone": "4441234567",
+        "birthday": "1991-07-20",
+        "gender": "male"
+    },
+    {
+        "id": 5,
+        "username": "user5",
+        "email": "g6h7i@example.com",
+        "password": "password345",
+        "role": "student",
+        "courses": [2, 6, 8],
+        "phone": "3331234567",
+        "birthday": "1988-11-11",
+        "gender": "female"
+    },
+    {
+        "id": 6,
+        "username": "user6",
+        "email": "j8k9l@example.com",
+        "password": "password678",
+        "role": "student",
+        "courses": [3, 7],
+        "phone": "2221234567",
+        "birthday": "1993-04-22",
+        "gender": "male"
+    },
+    {
+        "id": 7,
+        "username": "user7",
+        "email": "m0n1o@example.com",
+        "password": "password901",
+        "role": "student",
+        "courses": [1, 5],
+        "phone": "1111234567",
+        "birthday": "1990-08-30",
+        "gender": "female"
+    },
+    {
+        "id": 8,
+        "username": "user8",
+        "email": "p2q3r@example.com",
+        "password": "password234",
+        "role": "student",
+        "courses": [2, 4, 6],
+        "phone": "6661234567",
+        "birthday": "1989-12-12",
+        "gender": "male"
+    },
+    {
+        "id": 9,
+        "username": "user9",
+        "email": "s4t5u@example.com",
+        "password": "password567",
+        "role": "student",
+        "courses": [3, 5, 7],
+        "phone": "7771234567",
+        "birthday": "1991-02-18",
+        "gender": "female"
+    },
+    {
+        "id": 10,
+        "username": "user10",
+        "email": "v6w7x@example.com",
+        "password": "password890",
+        "role": "student",
+        "courses": [1, 6, 8],
+        "phone": "8881234567",
+        "birthday": "1994-05-25",
+        "gender": "male"
+    },
+    {
+        "id": 11,
+        "username": "user11",
+        "email": "y8z9a@example.com",
+        "password": "password123",
+        "role": "student",
+        "courses": [2, 4, 7],
+        "phone": "9991234567",
+        "birthday": "1992-09-10",
+        "gender": "female"
+    },
+    {
+        "id": 12,
+        "username": "user12",
+        "email": "b1c2d@example.com",
+        "password": "password456",
+        "role": "student",
+        "courses": [3, 5],
+        "phone": "0001234567",
+        "birthday": "1990-03-05",
+        "gender": "male"
+    }
+
+]
