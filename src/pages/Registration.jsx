@@ -8,7 +8,8 @@ import {
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { InputField, RadioGroup } from '../components/FormComponents';
-import '../styles/Registration.css'
+import { registerUser } from '../api';
+import '../styles/Registration.css';
 
 function Registration() {
     const [formData, setFormData] = useState({
@@ -22,6 +23,7 @@ function Registration() {
         course: '',
     });
     const [errors, setErrors] = useState({});
+    const [message, setMessage] = useState('');
 
     const handleChange = (e) => {
         const { id, value } = e.target;
@@ -72,10 +74,25 @@ function Registration() {
         return Object.keys(newErrors).length === 0;
     };
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
         if (validateForm()) {
-            alert('Registration successful!');
+            try {
+                const response = await registerUser(formData);
+                setMessage(response.message || 'Registration successful!');
+                setFormData({
+                    username: '',
+                    email: '',
+                    phone: '',
+                    birthday: '',
+                    gender: '',
+                    password: '',
+                    confirmPassword: '',
+                    course: '',
+                });
+            } catch (error) {
+                setErrors({ general: error.response?.data?.message || 'Registration failed' });
+            }
         }
     };
 
@@ -85,6 +102,7 @@ function Registration() {
                 <MDBCard style={{ maxWidth: '500px', padding: '20px' }}>
                     <MDBCardBody>
                         <h3 className="fw-bold text-center mb-4">Registration Form</h3>
+                        {message && <div className="text-success text-center mb-3">{message}</div>}
                         <form onSubmit={handleSubmit}>
                             <InputField
                                 id="username"
@@ -182,6 +200,8 @@ function Registration() {
 }
 
 export default Registration;
+
+
 
 
 

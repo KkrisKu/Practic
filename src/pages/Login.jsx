@@ -7,6 +7,7 @@ import {
 } from 'mdb-react-ui-kit';
 import { useState } from 'react';
 import { InputField } from '../components/FormComponents';
+import { loginUser } from '../api';
 import '../styles/Registration.css';
 
 function Login() {
@@ -17,6 +18,7 @@ function Login() {
         course: '',
     });
     const [errors, setErrors] = useState({});
+    const [message, setMessage] = useState('');
 
     const handleChange = (e) => {
         const { id, value } = e.target;
@@ -57,10 +59,17 @@ function Login() {
         return Object.keys(newErrors).length === 0;
     };
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
         if (validateForm()) {
-            alert('Login successful!');
+            try {
+                const response = await loginUser(formData);
+                setMessage(response.message || 'Login successful!');
+                localStorage.setItem('authToken', response.token);
+            } catch (error) {
+                setMessage(error.response?.data?.message || 'Login failed');
+                setErrors({ general: 'Invalid username or password' });
+            }
         }
     };
 
@@ -70,6 +79,7 @@ function Login() {
                 <MDBCard style={{ maxWidth: '400px', padding: '20px' }}>
                     <MDBCardBody>
                         <h3 className="fw-bold text-center mb-4">Login</h3>
+                        {message && <div className="text-success text-center mb-3">{message}</div>}
                         <form onSubmit={handleSubmit}>
                             <InputField
                                 id="username"
@@ -128,3 +138,4 @@ function Login() {
 }
 
 export default Login;
+
