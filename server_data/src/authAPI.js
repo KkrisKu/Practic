@@ -7,8 +7,8 @@ const resWrapper = require("./responceWrapper");
 
 
 router.post("/login", (req, res) => {
-  const { login, password } = req.body;
-  const user = users.find((item) => item.username === login && item.password === password);
+  const { email, password } = req.body;
+  const user = users.find((item) => item.email === email && item.password === password);
   if (user) {
     res.json(resWrapper(user, 200, "User found"));
   } else {

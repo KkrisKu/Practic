@@ -1,12 +1,15 @@
 /* eslint-disable no-undef */
 const express = require("express");
 
+const cors = require('cors')
+
 const http = require("http");
 const bodyParser = require("body-parser");
 
 const app = express();
 const PORT = 3004;
 
+app.use(cors())
 // Middleware
 app.use(express.json());
 app.use(bodyParser.json());
