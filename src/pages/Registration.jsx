@@ -76,9 +76,11 @@ function Registration() {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
+        console.log("handleSubmit");
         if (validateForm()) {
             try {
                 const response = await registerUser(formData);
+                console.log("handleSubmit", response);
                 setMessage(response.message || 'Registration successful!');
                 setFormData({
                     username: '',

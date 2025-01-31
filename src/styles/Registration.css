@@ -50,3 +50,9 @@ body {
 input::placeholder {
     color: #aaa;
 }
+
+.error-message {
+    color: red;
+    font-size: 14px;
+    margin-top: 5px;
+}

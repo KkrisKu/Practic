@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import { Card, Button } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 
 export default function FeatureCard({ title, text, image, buttonText, buttonLink }) {
     return (
@@ -8,16 +9,11 @@ export default function FeatureCard({ title, text, image, buttonText, buttonLink
             <Card.Body className="d-flex flex-column">
                 <Card.Title>{title}</Card.Title>
                 <Card.Text className="flex-grow-1">{text}</Card.Text>
-                <a
-                    href={buttonLink}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    style={{ textDecoration: 'none' }}
-                >
+                <Link to={buttonLink} style={{ textDecoration: 'none' }}>
                     <Button style={{ backgroundColor: '#4CAF50', border: 'none' }}>
                         {buttonText}
                     </Button>
-                </a>
+                </Link>
             </Card.Body>
         </Card>
     );
@@ -30,3 +26,4 @@ FeatureCard.propTypes = {
     buttonLink: PropTypes.string.isRequired,
     image: PropTypes.string.isRequired,
 };
+

@@ -1,11 +1,13 @@
+import { useEffect, useState } from 'react';
 import { Container } from 'react-bootstrap';
 import Slider from '../components/Slider.jsx';
 import FeatureCard from '../components/FeatureCard.jsx';
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 import '../styles/Course.css';
+import { fetchCourses } from '../api.js';
 
-export default function AboutUs() {
+export default function Course() {
     const slides = [
         {
             image: '/images/photo-man.jpg',
@@ -27,36 +29,20 @@ export default function AboutUs() {
         },
     ];
 
-    const courses = [
-        {
-            title: 'Курс з програмування',
-            text: 'Опануйте основи програмування та створюйте власні проєкти.',
-            image: '/images/working.jpg',
-            buttonText: 'Дізнатися більше',
-            buttonLink: '/course-page',
-        },
-        {
-            title: 'Курс з дизайну',
-            text: 'Розвивайте навички графічного та UX/UI дизайну.',
-            image: '/images/working.jpg',
-            buttonText: 'Дізнатися більше',
-            buttonLink: '/courses/design',
-        },
-        {
-            title: 'Курс з маркетингу',
-            text: 'Освойте сучасні маркетингові стратегії та інструменти.',
-            image: '/images/working.jpg',
-            buttonText: 'Дізнатися більше',
-            buttonLink: '/courses/marketing',
-        },
-        {
-            title: 'Курс з управління проектами',
-            text: 'Навчіться керувати проектами ефективно та професійно.',
-            image: '/images/working.jpg',
-            buttonText: 'Дізнатися більше',
-            buttonLink: '/courses/project-management',
-        },
-    ];
+    const [courses, setCourses] = useState([]);
+
+    useEffect(() => {
+        const loadCourses = async () => {
+            try {
+                const data = await fetchCourses();
+                setCourses(data);
+            } catch (error) {
+                console.error('Error fetching courses:', error);
+            }
+        };
+
+        loadCourses();
+    }, []);
 
     const responsive = {
         desktop: { breakpoint: { max: 3000, min: 1024 }, items: 3 },
@@ -90,14 +76,14 @@ export default function AboutUs() {
                         Наші курси
                     </h2>
                     <Carousel responsive={responsive} infinite={true} autoPlay={false} arrows={true}>
-                        {courses.map((course, index) => (
+                        {courses.map((course) => (
                             <FeatureCard
-                                key={index}
-                                title={course.title}
-                                text={course.text}
-                                image={course.image}
-                                buttonText={course.buttonText}
-                                buttonLink={course.buttonLink}
+                                key={course._id}
+                                title={course.name}
+                                text={course.description}
+                                image="/images/working.jpg"
+                                buttonText="Дізнатися більше"
+                                buttonLink={`/courses/${course._id}`}
                             />
                         ))}
                     </Carousel>

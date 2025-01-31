@@ -1,10 +1,23 @@
-import { useState } from 'react';
-/*import { Container, Row, Col, Accordion, Button, Card } from 'react-bootstrap';*/
+import { useState, useEffect } from 'react';
+import { fetchCourseById } from '../api.js';
 import '../styles/CoursePage.css';
 
-export default function Course() {
+export default function CoursePage() {
+    const [course, setCourse] = useState(null);
     const [openSections, setOpenSections] = useState({});
     const [modalContent, setModalContent] = useState(null);
+
+    useEffect(() => {
+        const loadCourse = async () => {
+            try {
+                const data = await fetchCourseById(1);
+                setCourse(data);
+            } catch (error) {
+                console.error('Error fetching course:', error);
+            }
+        };
+        loadCourse();
+    }, []);
 
     const toggleSection = (index) => {
         setOpenSections((prev) => ({
@@ -13,96 +26,58 @@ export default function Course() {
         }));
     };
 
-    const openModal = (videoUrl, text) => {
-        setModalContent({ videoUrl, text });
+    const openModal = (content, duration) => {
+        setModalContent({ content, duration });
     };
 
     const closeModal = () => {
         setModalContent(null);
     };
 
-    const coursePlan = [
-        {
-            title: "Основи Python",
-            subtopics: [
-                { title: "Змінні та типи даних", video: "https://www.youtube.com/embed/video1", text: "Опис змінних та типів даних у Python." },
-                { title: "Умовні оператори", video: "https://www.youtube.com/embed/video2", text: "Як працюють if, elif та else у Python." },
-            ],
-        },
-        {
-            title: "Функції",
-            subtopics: [
-                { title: "Оголошення функцій", video: "https://www.youtube.com/embed/video3", text: "Як створювати та викликати функції в Python." },
-                { title: "Аргументи та повернення значень", video: "https://www.youtube.com/embed/video4", text: "Передача параметрів у функції." },
-            ],
-        },
-        {
-            title: "Об'єктно-орієнтоване програмування",
-            subtopics: [
-                { title: "Класи та об'єкти", video: "https://www.youtube.com/embed/video5", text: "Основи ООП у Python." },
-                { title: "Наслідування", video: "https://www.youtube.com/embed/video6", text: "Як працює наслідування у Python." },
-            ],
-        },
-        {
-            title: "Файлове введення/виведення",
-            subtopics: [
-                { title: "Читання файлів", video: "https://www.youtube.com/embed/video7", text: "Як відкривати та читати файли у Python." },
-                { title: "Запис у файли", video: "https://www.youtube.com/embed/video8", text: "Методи запису у файли." },
-            ],
-        },
-    ];
+    if (!course) return <p>Loading...</p>;
 
     return (
         <div className="course-container">
-            <div className="course-sidebar">
+            <div className="course-sidebar expanded">
                 <iframe
                     className="course-video"
-                    src="https://www.youtube.com/embed/main_video"
+                    src={course.video}
                     title="Course Video"
                     allowFullScreen
                 ></iframe>
                 <button className="register-button">Зареєструватись</button>
-                <div className="course-benefits">
-                    <h3>Переваги курсу</h3>
-                    <ul>
-                        <li>Доступно для початківців</li>
-                        <li>Практичні завдання</li>
-                        <li>Досвідчені інструктори</li>
-                        <li>Доступ назавжди</li>
-                    </ul>
+                <div className="course-details">
+                    <h3>{course.name}</h3>
+                    <p><strong>Тип:</strong> {course.type}</p>
+                    <p><strong>Мова:</strong> {course.language}</p>
+                    <p><strong>Автор:</strong> {course.author}</p>
+                    <p><strong>Інструктор:</strong> {course.instructor}</p>
+                    <p><strong>Тривалість:</strong> {course.duration}</p>
+                    <p><strong>Ціна:</strong> ${course.price}</p>
+                    <p><strong>Рейтинг:</strong> {course.rating} ({course.reviews} відгуків)</p>
                 </div>
             </div>
 
             <div className="course-content">
                 <h1>Про курс</h1>
-                <p>Цей курс допоможе вам освоїти Python з нуля, включаючи основи синтаксису, роботу з функціями та ООП.</p>
-
-                <h2>Що ви дізнаєтесь?</h2>
-                <ul className="learning-points">
-                    <li>Розуміння основ програмування</li>
-                    <li>Робота з функціями та змінними</li>
-                    <li>Застосування ООП у Python</li>
-                    <li>Обробка файлів та помилок</li>
-                </ul>
+                <div dangerouslySetInnerHTML={{ __html: course.course_info }}></div>
 
                 <h2>План курсу</h2>
                 <div className="course-plan">
-                    {coursePlan.map((section, index) => (
+                    {Object.entries(course.course_content).map(([section], index) => (
                         <div key={index} className="course-section">
                             <button onClick={() => toggleSection(index)} className="section-title">
                                 {section.title}
-                                <span className={`arrow ${openSections[index] ? 'open' : ''}`}>&#x25BC;</span> {/* Стрілочка */}
+                                <span className={`arrow ${openSections[index] ? 'open' : ''}`}>&#x25BC;</span>
                             </button>
-                            {openSections[index] &&
-                                section.subtopics.map((sub, subIndex) => (
-                                    <button
-                                        key={subIndex}
-                                        onClick={() => openModal(sub.video, sub.text)}
-                                        className="subtopic"
-                                    >
-                                        {sub.title}
-                                    </button>
-                                ))}
+                            {openSections[index] && (
+                                <button
+                                    onClick={() => openModal(section.content, section.duration)}
+                                    className="subtopic"
+                                >
+                                    {section.title}
+                                </button>
+                            )}
                         </div>
                     ))}
                 </div>
@@ -112,13 +87,15 @@ export default function Course() {
                 <div className="modal">
                     <div className="modal-content">
                         <span className="close-button" onClick={closeModal}>&times;</span>
-                        <iframe src={modalContent.videoUrl} title="Subtopic Video" allowFullScreen></iframe>
-                        <p>{modalContent.text}</p>
+                        <p>{modalContent.content}</p>
+                        <p><strong>Тривалість:</strong> {modalContent.duration}</p>
                     </div>
                 </div>
             )}
         </div>
     );
 }
+
+
 
 

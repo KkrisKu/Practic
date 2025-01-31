@@ -17,8 +17,9 @@ function Login() {
         password: '',
         course: '',
     });
+
     const [errors, setErrors] = useState({});
-    const [message, setMessage] = useState('');
+    const [message, setMessage] = useState({ text: '', type: '' });
 
     const handleChange = (e) => {
         const { id, value } = e.target;
@@ -64,11 +65,17 @@ function Login() {
         if (validateForm()) {
             try {
                 const response = await loginUser(formData);
-                setMessage(response.message || 'Login successful!');
+                setMessage({ text: response.message || 'Login successful!', type: 'success' });
                 localStorage.setItem('authToken', response.token);
             } catch (error) {
-                setMessage(error.response?.data?.message || 'Login failed');
-                setErrors({ general: 'Invalid username or password' });
+                const errorMsg = error.response?.data?.message || 'Login failed';
+
+                setMessage({
+                    text: errorMsg,
+                    type: errorMsg === "User not found" ? 'error' : 'error'
+                });
+
+                setErrors({ general: 'Invalid email or password' });
             }
         }
     };
@@ -79,7 +86,13 @@ function Login() {
                 <MDBCard style={{ maxWidth: '400px', padding: '20px' }}>
                     <MDBCardBody>
                         <h3 className="fw-bold text-center mb-4">Login</h3>
-                        {message && <div className="text-success text-center mb-3">{message}</div>}
+
+                        {message.text && (
+                            <div className={message.type === 'error' ? 'text-danger text-center mb-3' : 'text-success text-center mb-3'}>
+                                {message.text}
+                            </div>
+                        )}
+
                         <form onSubmit={handleSubmit}>
                             <InputField
                                 id="username"
@@ -138,4 +151,5 @@ function Login() {
 }
 
 export default Login;
+
 
