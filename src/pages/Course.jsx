@@ -78,12 +78,12 @@ export default function Course() {
                     <Carousel responsive={responsive} infinite={true} autoPlay={false} arrows={true}>
                         {courses.map((course) => (
                             <FeatureCard
-                                key={course._id}
+                                key={course.id}
                                 title={course.name}
                                 text={course.description}
                                 image="/images/working.jpg"
                                 buttonText="Дізнатися більше"
-                                buttonLink={`/courses/${course._id}`}
+                                buttonLink={`/courses/${course.id}`}
                             />
                         ))}
                     </Carousel>

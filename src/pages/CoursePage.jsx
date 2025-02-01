@@ -1,8 +1,10 @@
 import { useState, useEffect } from 'react';
+import { useParams } from 'react-router-dom';
 import { fetchCourseById } from '../api.js';
 import '../styles/CoursePage.css';
 
 export default function CoursePage() {
+    const { id } = useParams();
     const [course, setCourse] = useState(null);
     const [openSections, setOpenSections] = useState({});
     const [modalContent, setModalContent] = useState(null);
@@ -10,14 +12,14 @@ export default function CoursePage() {
     useEffect(() => {
         const loadCourse = async () => {
             try {
-                const data = await fetchCourseById(1);
+                const data = await fetchCourseById(id);
                 setCourse(data);
             } catch (error) {
                 console.error('Error fetching course:', error);
             }
         };
         loadCourse();
-    }, []);
+    }, [id]);
 
     const toggleSection = (index) => {
         setOpenSections((prev) => ({
@@ -64,7 +66,7 @@ export default function CoursePage() {
 
                 <h2>План курсу</h2>
                 <div className="course-plan">
-                    {Object.entries(course.course_content).map(([section], index) => (
+                    {Object.entries(course.course_content).map(([_, section], index) => (
                         <div key={index} className="course-section">
                             <button onClick={() => toggleSection(index)} className="section-title">
                                 {section.title}
@@ -95,6 +97,8 @@ export default function CoursePage() {
         </div>
     );
 }
+
+
 
 
 
